@@ -1,0 +1,28 @@
+<html>
+<script>
+function validate()
+{
+var name=document.myform.name.value;
+var password=document.myform.password.value;
+ if(name==''||password=='')
+ {
+ alert("name & password should not be null");
+ return false;
+ }
+ else if(password.length<6)
+ {
+ alert("password must be greater than 6 character");
+ }
+ else{
+ return true;
+ }
+ }
+ </script>
+ <body>
+ <form name="myform" method="POST" action="2.html" onsubmit= "return validate()">
+ name:<input type="text" name="name">
+ <br>
+ password:<input type="password" name="password"><br>
+ <input type="submit" value="go"/>
+ </body>
+ </html>
